@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wja-Lh-FCg">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mb-cH-GOn">
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="OBV-eO-4QA">
+                                        <connections>
+                                            <action selector="goBack:" destination="2" id="ssz-i8-b2S"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="stop" id="EUq-nb-xmR"/>
+                                    <barButtonItem systemItem="refresh" id="6Bv-wI-VWu"/>
+                                    <barButtonItem systemItem="fastForward" id="G4I-qD-OQC"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wja-Lh-FCg" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="1rI-YH-0gK"/>
+                            <constraint firstItem="5mb-cH-GOn" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="84o-Zu-Xu3"/>
+                            <constraint firstItem="Wja-Lh-FCg" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="8hs-7k-kIu"/>
+                            <constraint firstItem="Wja-Lh-FCg" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="H0R-Hr-4Rr"/>
+                            <constraint firstItem="Wja-Lh-FCg" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="LCG-wy-tmd"/>
+                            <constraint firstItem="5mb-cH-GOn" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="nOx-kR-ht8"/>
+                            <constraint firstItem="5mb-cH-GOn" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="oTq-xF-5gD"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="mBack" destination="OBV-eO-4QA" id="pOW-S6-cBG"/>
+                        <outlet property="mForward" destination="G4I-qD-OQC" id="PJb-QR-jmH"/>
+                        <outlet property="mRefresh" destination="6Bv-wI-VWu" id="fC7-Oc-h3b"/>
+                        <outlet property="mStot" destination="EUq-nb-xmR" id="qui-hY-bP3"/>
+                        <outlet property="viewWeb" destination="Wja-Lh-FCg" id="BEr-6A-cxw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35" y="272"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
